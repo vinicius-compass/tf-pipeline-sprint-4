@@ -204,7 +204,7 @@ Mais informações sobre o Elastic Beanstalk podem ser encontradas na [documenta
 ## Entrega
 
 - Aceitar o convite do repositório da sprint-4-pb-aws-utfpr;
-- **O trabalho deve ser feito em grupos de quatro pessoas**;
+- **O trabalho deve ser feito em grupos de três ou quatro pessoas**;
   - Evitar repetições de grupos da sprint anterior;
 - Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
 - Subir o trabalho na branch com um [Readme.md](README.md) 
@@ -212,4 +212,4 @@ Mais informações sobre o Elastic Beanstalk podem ser encontradas na [documenta
   - dificuldades conhecidas
   - como utilizar o sistema
   - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-- O prazo de entrega é até às 12h do dia 06/11/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr](https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr))
+- O prazo de entrega é até às 10h do dia 06/11/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr](https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr))
