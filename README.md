@@ -212,4 +212,4 @@ Mais informações sobre o Elastic Beanstalk podem ser encontradas na [documenta
   - dificuldades conhecidas
   - como utilizar o sistema
   - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-- O prazo de entrega é até às 10h do dia 06/11/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr](https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr))
+- O prazo de entrega é até às 9h do dia 06/11/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr](https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr))
