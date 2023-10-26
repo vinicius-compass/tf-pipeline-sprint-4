@@ -1,0 +1,25 @@
+{
+  "name": "grupo-3",
+  "version": "1.0.0",
+  "description": "Atividade Sprint 3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr.git"
+  },
+  "author": "Beatriz Milanezi Lopes, Isaac Fiuza Vieira, João Vitor Schiavinato Delfino, Pedro Eduardo Dotto Marafiga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
