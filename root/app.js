@@ -9,5 +9,5 @@ app.use(router);
 const PORT = 8080;
 
 app.listen(PORT, () => {
-    console.log(`Serve is running on https://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

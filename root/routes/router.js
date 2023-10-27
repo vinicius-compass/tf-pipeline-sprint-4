@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.get('/api/atividades', async (req, res) => {
 
-    try{
+    try {
         const response = await axios.get('https://www.boredapi.com/api/activity')
 
         const data = {
@@ -36,6 +36,30 @@ router.get('/api/atividades', async (req, res) => {
     }
 });
 
+//Rota /api/piadas ---------------------
+
+router.get('/api/piadas', async (req, res) => {
+
+    try {
+        const response = await axios.get('https://api.chucknorris.io/jokes/random')
+
+        const data = {
+
+        data_atualizacao: response.data.updated_at.slice(0, 10),
+        data_criacao: response.data.created_at.slice(0, 10),
+        icone: response.data.icon_url,
+        id: uuid.v4(),
+        piada: response.data.value.replace("Chuck Norris", "CHUCK NORRIS"),
+        referencia: response.data.url
+        }
+
+        res.status(200).send(data)
+        
+    } catch(error) {
+
+        console.error('Erro ao buscar os dados da API:', error);
+        res.status(500).send('Erro ao buscar os dados da API');
+    }
+});
 
 module.exports = router
-
