@@ -1,12 +1,13 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+const router  = require('./routes/router')
+const path    = require('path')
 
+const app = express();
+app.use(router);
+
+// initiate server
 const PORT = 3000;
 
-app.listen(PORT, function() {
-    console.log(`O Express está rodando na porta ${PORT}`);
-});
-
-app.get('/', (req, res) => {
-    res.send("Está funcionando");
+app.listen(PORT, () => {
+    console.log(`Serve is running on https://localhost:${PORT}`);
 });
