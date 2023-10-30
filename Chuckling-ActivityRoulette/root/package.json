@@ -1,0 +1,23 @@
+{
+  "name": "chucknorrisjokes-activity",
+  "version": "1.0.0",
+  "description": "Aplicação nodeJs (express) que consome duas APIs distintas com deploy na AWS Elastic Beanstalk.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Chuck Norris",
+    "Activity",
+    "Chuckling",
+    "ActivityRoulette"
+  ],
+  "author": "Joice, Nádia, Anderson e Matheus",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "uuid": "^9.0.1"
+  }
+}
