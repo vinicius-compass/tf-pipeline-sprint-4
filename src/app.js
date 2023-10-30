@@ -3,8 +3,6 @@ const groupRoute = require("./routes/groupRoute");
 const jokeRoute = require("./routes/jokeRoute");
 const taskRoute = require("./routes/taskRoute");
 
-const { join } = require("path");
-
 const app = express();
 
 app.use(express.json());
