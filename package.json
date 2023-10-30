@@ -4,7 +4,6 @@
     "description": "Avaliação da quarta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS",
     "main": "app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node src/app.js",
         "dev": "nodemon src/app.js",
         "format": "prettier --write .",

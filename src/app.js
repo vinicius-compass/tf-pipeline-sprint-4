@@ -5,12 +5,12 @@ const taskRoute = require("./routes/taskRoute");
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use("/api/group", groupRoute);
-app.use("/api/task", taskRoute);
-app.use("/api/joke", jokeRoute);
+app.use("/api/atividades", taskRoute);
+app.use("/api/piadas", jokeRoute);
+app.use("/", groupRoute);
 
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
 });
