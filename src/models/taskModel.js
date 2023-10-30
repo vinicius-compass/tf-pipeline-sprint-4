@@ -22,33 +22,35 @@ const newId = require("../utils/UUID");
  * */
 
 const taskModel = {
-  /**
-   * @param {number} value
-   * @returns {string}
-   * */
-  convertToPercent(value) {
-    return `${value * 100}%`;
-  },
-  /**
-   * @param {Task} data
-   * @returns {FormatedTask}
-   * */
-  formatData(data) {
-    return {
-      id: newId(),
-      atividade: data.activity,
-      tipo: data.type,
-      participantes: data.participants,
-      acessibilidade: this.convertToPercent(data.accessibility),
-    };
-  },
-  /**
-   * @returns {Promise<FormatedTask>}
-   * */
-  async getTask() {
-    const response = await axios.get("https://www.boredapi.com/api/activity");
-    return this.formatData(response.data);
-  },
+    /**
+     * @param {number} value
+     * @returns {string}
+     * */
+    convertToPercent(value) {
+        return `${value * 100}%`;
+    },
+    /**
+     * @param {Task} data
+     * @returns {FormatedTask}
+     * */
+    formatData(data) {
+        return {
+            id: newId(),
+            atividade: data.activity,
+            tipo: data.type,
+            participantes: data.participants,
+            acessibilidade: this.convertToPercent(data.accessibility),
+        };
+    },
+    /**
+     * @returns {Promise<FormatedTask>}
+     * */
+    async getTask() {
+        const response = await axios.get(
+            "https://www.boredapi.com/api/activity",
+        );
+        return this.formatData(response.data);
+    },
 };
 
 module.exports = taskModel;
