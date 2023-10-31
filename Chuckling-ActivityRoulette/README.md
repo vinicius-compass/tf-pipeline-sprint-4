@@ -1,37 +1,107 @@
-# Avaliação Sprint 4 - Programa de Bolsas Compass UOL / AWS e UTFPR
+# Ferramentas e Dependências
 
-Avaliação da quarta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
+<p align="center">
+  <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
+ <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
+</p>
 
-***
+<table align="center">
+  <tr>
+    <td>UUID</td>
+    <td>09.00.1</td>
+    <td>Biblioteca para geração do GUID.</td>
+  </tr>
+  <tr>
+    <td>Node.js</td>
+    <td>18.15.0</td>
+    <td>Ambiente de execução JavaScript no lado do servidor.</td>
+  </tr>
+  <tr>
+    <td>Axios</td>
+    <td>01.06.0</td>
+    <td>Cliente HTTP para fazer solicitações a APIs e servidores.</td>
+  </tr>
+  <tr>
+    <td>Date-fns</td>
+    <td>02.30.0</td>
+    <td>Biblioteca para manipulação de datas e horas em JavaScript.</td>
+  </tr>
+  <tr>
+    <td>Express</td>
+    <td>04.18.2</td>
+    <td>Framework web para desenvolvimento de aplicativos em Node.js.</td>
+  </tr>
+  <tr>
+    <td>dotenv</td>
+    <td>16.03.1</td>
+    <td>Biblioteca para carregar variáveis de ambiente a partir de um arquivo `.env`.</td>
+  </tr>
+</table>
+
+## Sumário
+
+Este projeto trata-se da implementação de três rotas: a primeira retorna o grupo, as demais implmentam duas APIs distintas, uma sobre piadas aleatórias de Chuck Norris outra sobre encontrar coisas para fazer quando estiver entediado.
+
+## Estrutura de Pastas
+
+```
+root/
+├── controllers/
+│ ├── ChuckNorrisJokeController.js/
+│ ├── RandomActivityController.js/
+├── models/
+│ ├── ChuckNorrisJokeModel.js/
+│ ├── RandomActivityModel.js/
+├── routes/
+│ ├── routes.js/
+├── utils/
+│ ├── formatDateUtils.js/
+│ ├── generateIdUtils.js/
+│ ├── replaceText.js/
+├── app.js
+```
 
 ## Execução (Código Fonte)
+Para executar o código-fonte deste projeto, siga as etapas abaixo:
 
-Com base nas atividades anteriores realizadas, crie uma aplicação nodeJs (express) que irá consumir duas APIs distintas e efetue o deploy na AWS Elastic Beanstalk.
+### Requisitos
+
+- Node.js
+- npm
+- Acesso à internet
+
+### Instruções
+
+1. Clone o repositório para o seu ambiente local.
+2. Execute `npm install` para instalar as dependências.
+3. Configure as variáveis de ambiente necessárias, se aplicável - arquivo .env, para definição da porta.
+4. Execute `npm start` ou `node app.js` para iniciar a aplicação.
 
 **Especificações**:
 
-A aplicação terá basicamente duas rotas que irão retornar informações vindas de APIs externas formatadas de acordo com a especifícação a seguir.
+A aplicação tem basicamente duas rotas que retornam informações vindas de APIs externas formatadas de acordo com a especifícação a seguir.
 
 ***
 ### Rota → Get /
 
 1. Nesta rota será efetuado um get na raiz do projeto.
 
-2. O retorno desta API deverá ter um texto simples.
+2. O retorno desta API contém um texto simples que retorna o grupo pertencente ao projeto.
 Exemplo:
 
 ```json
- Este é o app do Grupo 10 😀
+ Este é o app do Grupo 4 😀
 ```
 
-3. Status code para sucesso da requisição será `200`
+3. Status code para sucesso da requisição é `200`
 
 ***
 ### Rota → Get /api/piadas
 
-1. Nesta rota será efetuado um get em: [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random)
+1. Nesta rota é efetuado um get em: [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random)
 
-2. O retorno da API a ser desenvolvida deverá estar na seguinte formatação:
+2. O retorno da API contém a seguinte saída:
 
 ```json
 {
@@ -44,28 +114,7 @@ Exemplo:
 }
 ```
 
-#### Observações sobre os campos no retorno esperado
-
-- `data_atualizacao` → será o campo “updated_at” da resposta da API original.
-  - Formatação: Sem as horas (somente a data no formato DD-MM-AAAA)
-
-- `data_criacao` → será o campo “created_at” da resposta da API original.  
-  - Formatação: Sem as horas (somente a data no formato DD-MM-AAAA)
-
-- `icone` → será o campo “icon_url” da resposta da API original.  
-  - Formatação: Não há (manter original)
-
-- `id` → será um GUID gerado randomicamente
-  - Formatação: um GUID possui o formato {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX} onde X é um Hexadecimal (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F). 
-  - Pode-se utilizar libs para a geração ou criação de funções para esse fim.
-
-- `piada` → será o campo “value” da resposta da API original. 
-  - Formatação: a palavra Chuck Norris deverá estar em caixa alta dentro da piada.
-
-- `referencia` → será o campo “url” da resposta da API original.  
-  - Formatação: Não há (manter original)
-
-3. Status code para sucesso da requisição será `200`
+3. Status code para sucesso da requisição é `200`
 
 ***
 
@@ -213,3 +262,9 @@ Mais informações sobre o Elastic Beanstalk podem ser encontradas na [documenta
   - como utilizar o sistema
   - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
 - O prazo de entrega é até às 9h do dia 06/11/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr](https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr))
+
+## Desenvolvedores 
+- Anderson
+- Joice
+- Matheus
+- Nádia
