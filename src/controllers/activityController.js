@@ -1,15 +1,18 @@
 const axios = require('axios')
 const { v4: uuidv4 } = require('uuid');
 
-const getActivity =  (req, res) => {
+const getActivity =  async (req, res) => {
         let data
         try{
             const apiUrl =  `https://www.boredapi.com/api/activity`
-            const response = axios.get(apiUrl)
-            dados = response
-            console.log(response)
+            const response = await axios.get(apiUrl)
+            dados = response.data
+            console.log(dados)
             data = {
                 id: getGUID(),
+                atividade:dados.activity,
+                tipo:dados.type,
+                participantes:dados.participants,
                 status:200
             }
             res.status(200).json(data);
