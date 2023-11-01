@@ -34,7 +34,7 @@ $ git clone <https://github.com/Compass-pb-aws-2023-UTFPR/sprint-4-pb-aws-utfpr.
 # Acesse a pasta do projeto no terminal/cmd
 $ cd sprint-4-pb-aws-utfpr
 
-# Realize o pull da branch equipe-2
+# Realize o pull da branch equipe-3
 $ git pull origin grupo-3
 
 # Vá para a pasta root
@@ -112,5 +112,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 # Autores
 
-| <img style="border-radius: 50%;" src=root\frontend\devBeatriz.jpeg width="100px;" alt=""/><br><sub>Beatriz Milanezi Lopes</sub> | <img style="border-radius: 50%;" src=root\frontend\devIsaac.jpeg width="100px;" alt=""/><br><sub>Isaac Fiuza Vieira</sub> | <img style="border-radius: 50%;" src=root\frontend\devJoao.png width="100px;" alt=""/><br><sub>João Vitor Schiavinato Delfino</sub> | <img style="border-radius: 50%;" src=root\frontend width="100px;" alt=""/><br><sub>Pedro Eduardo Dotto Marafiga</sub> |
+| <img style="border-radius: 50%;" src=root\frontend\devBeatriz.jpeg width="100px;" alt=""/><br><sub>Beatriz Milanezi Lopes</sub> | <img style="border-radius: 50%;" src=root\frontend\devIsaac.jpeg width="300px;" alt=""/><br><sub>Isaac Fiuza Vieira</sub> | <img style="border-radius: 50%;" src=root\frontend\devJoao.png width="100px;" alt=""/><br><sub>João Vitor Schiavinato Delfino</sub> | <img style="border-radius: 50%;" src=root\frontend\devPedro.jpeg width="100px;" alt=""/><br><sub>Pedro Dotto Marafiga</sub> |
 | :---: | :---: | :---: | :---:|
