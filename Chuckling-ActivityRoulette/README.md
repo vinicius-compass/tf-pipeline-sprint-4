@@ -56,6 +56,7 @@ root/
 ├── routes/
 │ ├── routes.js/
 ├── utils/
+│ ├── formatAccessibilityUtils.js/
 │ ├── formatDateUtils.js/
 │ ├── generateIdUtils.js/
 │ ├── replaceText.js/
@@ -120,9 +121,9 @@ Exemplo:
 
 ### Rota → Get /api/atividades
 
-1. Nesta rota será efetuado um get em: [https://www.boredapi.com/api/activity](https://www.boredapi.com/api/activity)
+1. Nesta rota é efetuado um get em: [https://www.boredapi.com/api/activity](https://www.boredapi.com/api/activity)
 
-2. O retorno da API a ser desenvolvida deverá estar na seguinte formatação:
+2. O retorno da API contém a seguide saída:
 
 ```json
 {
@@ -134,26 +135,7 @@ Exemplo:
 }
 ```
 
-### Observações sobre os campos no retorno esperado
-
-- `id` → será um GUID gerado randomicamente
-  - Formatação: um GUID possui o formato {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX} onde X é um Hexadecimal (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)
-  - Pode-se utilizar libs para a geração ou criação de funções para esse fim.
-
-- `atividade` → será o campo “activity” da resposta da API original.  
-  - Formatação: Não há (manter original)
-
-- `tipo` → será o campo “type” da resposta da API original.  
-  - Formatação: Não há (manter original)
-
-- `participantes` → será o campo “participants” da resposta da API original.  
-  - Formatação: Não há (manter original)
-
-- `acessibilidade` →será o campo “accessibility” da resposta da API original.  
-  - Formatação: transformar para número percentual dentro de uma string.
-  - Exemplo: api respondeu `0.15` logo a resposta será `"15%"`
-
-3. Status code para sucesso da requisição será `200`
+3. Status code para sucesso da requisição é `200`
 
 ***
 
