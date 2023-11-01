@@ -9,6 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, "public")));
 app.use("/", messageRoute);
 
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(8080, () => {
+    console.log("Server is listening on port 8080");
 });
