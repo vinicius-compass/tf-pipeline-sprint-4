@@ -1,11 +1,12 @@
 const taskModel = require("../models/taskModel");
+const ApiError = require("../utils/apiError");
 
-const getTask = async (req, res) => {
+const getTask = async (req, res, next) => {
     try {
         const task = await taskModel.getTask();
-        res.status(200).json(task);
+        return res.status(200).json(task);
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        return next(new ApiError("Erro na API remota!", 500));
     }
 };
 

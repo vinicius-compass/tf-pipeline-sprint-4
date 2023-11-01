@@ -10,9 +10,7 @@ const newId = require("../utils/UUID");
  * @property {string} link
  * @property {string} key A unique numeric id [1000000, 9999999]
  * @property {number} accessibility A factor describing how possible an event is to do with zero being the most accessible [0.0, 1.0]
- * */
-
-/**
+ *
  * @typedef {Object} FormatedTask
  * @property {string} id Random RFC 4122 version 4 UUID
  * @property {string} atividade Description of the queried activity
@@ -26,7 +24,7 @@ const taskModel = {
      * @param {number} value
      * @returns {string}
      * */
-    convertToPercent(value) {
+    toPercent(value) {
         return `${value * 100}%`;
     },
     /**
@@ -39,7 +37,7 @@ const taskModel = {
             atividade: data.activity,
             tipo: data.type,
             participantes: data.participants,
-            acessibilidade: this.convertToPercent(data.accessibility),
+            acessibilidade: this.toPercent(data.accessibility),
         };
     },
     /**

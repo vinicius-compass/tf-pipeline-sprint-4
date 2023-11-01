@@ -10,9 +10,7 @@ const newUUID = require("../utils/UUID.js");
  * @property {string} updated_at YYYY-MM-DD HH:MM:SS.SSSZ
  * @property {string} url URL to joke
  * @property {string} value Joke string
- * */
-
-/**
+ *
  * @typedef {Object} FormatedJoke
  * @property {string} data_atualizacao DD-MM-YYYY
  * @property {string} data_criacao DD-MM-YYYY
@@ -33,6 +31,16 @@ const jokeModel = {
     },
 
     /**
+     * @param {string} jokeString
+     * @returns {string}
+     * */
+    formatValue(jokeString) {
+        return jokeString.replace(/\b(chuck|norris)\b/gi, (string) =>
+            string.toUpperCase(),
+        );
+    },
+
+    /**
      * @param {Joke} data
      * @returns {FormatedJoke}
      * */
@@ -42,7 +50,7 @@ const jokeModel = {
             data_criacao: this.formatDate(data.created_at),
             icone: data.icon_url,
             id: newUUID(),
-            piada: this.toUpperCaseChuckNorris(data.value),
+            piada: this.formatValue(data.value),
             referencia: data.url,
         };
     },
@@ -50,15 +58,6 @@ const jokeModel = {
     /**
      * @returns {Promise<FormatedJoke>}
      * */
-
-    /**
-     * @param {string} jokeString
-     * @returns {capitalizedJokeString}
-     * */
-    toUpperCaseChuckNorris(jokeString) {
-        return jokeString.replace(/\b(chuck|norris)\b/gi, string => string.toUpperCase());
-    },
-    
     async getJoke() {
         const response = await axios.get(
             "https://api.chucknorris.io/jokes/random",
