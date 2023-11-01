@@ -42,7 +42,7 @@ const jokeModel = {
             data_criacao: this.formatDate(data.created_at),
             icone: data.icon_url,
             id: newUUID(),
-            piada: data.value,
+            piada: this.toUpperCaseChuckNorris(data.value),
             referencia: data.url,
         };
     },
@@ -50,6 +50,15 @@ const jokeModel = {
     /**
      * @returns {Promise<FormatedJoke>}
      * */
+
+    /**
+     * @param {string} jokeString
+     * @returns {capitalizedJokeString}
+     * */
+    toUpperCaseChuckNorris(jokeString) {
+        return jokeString.replace(/\b(chuck|norris)\b/gi, string => string.toUpperCase());
+    },
+    
     async getJoke() {
         const response = await axios.get(
             "https://api.chucknorris.io/jokes/random",
