@@ -13,6 +13,7 @@ const getActivity =  async (req, res) => {
                 atividade:dados.activity,
                 tipo:dados.type,
                 participantes:dados.participants,
+                acessibilidade: dados.accessibility*100 + '%',
                 status:200
             }
             res.status(200).json(data);
