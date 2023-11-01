@@ -112,5 +112,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 # Autores
 
-| <img style="border-radius: 50%;" src=root\frontend\devBeatriz.jpeg width="100px;" alt=""/><br><sub>Beatriz Milanezi Lopes</sub> | <img style="border-radius: 50%;" src=root\frontend\devIsaac.jpeg width="300px;" alt=""/><br><sub>Isaac Fiuza Vieira</sub> | <img style="border-radius: 50%;" src=root\frontend\devJoao.png width="100px;" alt=""/><br><sub>João Vitor Schiavinato Delfino</sub> | <img style="border-radius: 50%;" src=root\frontend\devPedro.jpeg width="100px;" alt=""/><br><sub>Pedro Dotto Marafiga</sub> |
+| <img style="border-radius: 50%;" src=root\frontend\devBeatriz.jpeg width="300px;" alt=""/><br><sub>Beatriz Milanezi Lopes</sub> | <img style="border-radius: 50%;" src=root\frontend\devIsaac.jpeg width="800px;" alt=""/><br><sub>Isaac Fiuza Vieira</sub> | <img style="border-radius: 50%;" src=root\frontend\devJoao.png width="100px;" alt=""/><br><sub>João Vitor Schiavinato Delfino</sub> | <img style="border-radius: 50%;" src=root\frontend\devPedro.jpeg width="300px;" alt=""/><br><sub>Pedro Dotto Marafiga</sub> |
 | :---: | :---: | :---: | :---:|
