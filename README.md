@@ -106,7 +106,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 ## Dificuldades
-
+![Alt text](image.png)
 
 
 
