@@ -19,6 +19,25 @@ const apiController = {
         }
 
         return data
+    },
+
+    getActivity: async () => {
+        let data
+        
+        const response = await axios.get(
+            "https://www.boredapi.com/api/activity"
+        )
+        datas = response.data
+
+        data = {
+            id: "teste",
+            atividade: datas.activity,
+            tipo: datas.type,
+            participantes: datas.participants,
+            acessibilidade: datas.accessibility
+        }
+
+        return data
     }
 
 }

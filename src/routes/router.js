@@ -12,4 +12,10 @@ router.get('/api/piadas', async (req, res) => {
     res.status(200).json(response)
 })
 
+router.get('/api/atividades', async (req, res) => {
+    const response = await apiController.getActivity()
+    console.log(response)
+    res.status(200).json(response)
+})
+
 module.exports = router
