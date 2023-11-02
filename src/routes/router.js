@@ -6,4 +6,10 @@ router.get('/', (req, res) => {
     res.status(200).send('Este é o app do Grupo 5 😀')
 })
 
+router.get('/api/piadas', async (req, res) => {
+    const response = await apiController.getJoke()
+    console.log(response)
+    res.status(200).json(response)
+})
+
 module.exports = router
