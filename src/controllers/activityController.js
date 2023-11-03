@@ -1,36 +1,21 @@
-const axios = require('axios')
-const { v4: uuidv4 } = require('uuid');
+const activityModel = require("../models/activityModel");
 
 const getActivity =  async (req, res) => {
-        let data
-        try{
-            const apiUrl =  `https://www.boredapi.com/api/activity`
-            const response = await axios.get(apiUrl)
-            dados = response.data
-            console.log(dados)
-            data = {
-                id: getGUID(),
-                atividade:dados.activity,
-                tipo:dados.type,
-                participantes:dados.participants,
-                acessibilidade: dados.accessibility*100 + '%',
-                status:200
-            }
-            res.status(200).json(data);
-        }
-        catch(error){
-            data = {
-                status:400
-            }
-            res.status(500).json(data);
-        }
+    try {
+        const activity = await activityModel.getActivity();
+
+        res.setHeader('Content-Type', 'application/json');
+        
+        res.status(200).send(activity);
     }
+    catch(error){
+        data = {
+            status:400
+        }
+        res.status(500).json({ message: error.message });
+    }
+}
 
-
-function getGUID(){
-    const guid = uuidv4();
-    return `{${guid}}`;
-}  
 
 module.exports = {
     getActivity,
