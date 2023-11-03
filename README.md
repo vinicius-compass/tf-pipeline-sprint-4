@@ -1,4 +1,4 @@
-# AWS Elastic Beanstalk
+# Projeto - Node.js + AWS Elastic Beanstalk
 
 ---
 
@@ -12,7 +12,7 @@ A aplicação possui três rotas:
 2. Rota `/api/piadas`: Retorna um json com uma piada aleatória da API Chucknorris.
 3. Rota `/api/atividades`: Retorna um json com uma atividade aleatória.
 
-A aplicação foi hospedada na AWS pelo serviço Elastic Beanstalk. Você pode acessar a aplicação por meio do seguinte link: [link para a aplicação].
+A aplicação foi hospedada na AWS pelo serviço Elastic Beanstalk. Você pode acessar a aplicação clicando [aqui](http://nodejs-sprint4-env.eba-pnqnqptc.us-east-1.elasticbeanstalk.com/).
 
 ---
 
