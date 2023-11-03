@@ -1,4 +1,5 @@
 const axios = require('axios')
+const { v4: uuidv4 } = require('uuid')
 
 function formatDate(date){
     let sliced_date = date.slice(0, 10)
@@ -33,7 +34,7 @@ const apiController = {
             data_atualizacao: formatDate(datas.updated_at),
             data_criacao: formatDate(datas.created_at),
             icone: datas.icon_url,
-            id: "teste",
+            id: uuidv4(),
             piada: formatChuck(datas.value),
             referencia: datas.url
         }
@@ -50,7 +51,7 @@ const apiController = {
         datas = response.data
 
         data = {
-            id: "teste",
+            id: uuidv4(),
             atividade: datas.activity,
             tipo: datas.type,
             participantes: datas.participants,
